@@ -1,0 +1,21 @@
+name: Node projesi Kontrol Mekanizması
+
+on:
+  push:
+    branches: :[ "main" ]
+
+jobs:
+  kod-analizi:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 1. Adim - Kodu Depodan Cek
+        uses: actions/checkout@v4
+
+      - name: 2. Adim - Node.js Ortamini Kur
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: 3. Adim - Versiyonu Ekrana Yazdir
+        run: node -v
