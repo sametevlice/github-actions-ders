@@ -1,0 +1,17 @@
+name: Ilk Otomasyonum
+
+# Tetikleyici: Main branch'ine her kod gönderildiğinde çalış
+on:
+  push:
+    branches: [ "main", "master" ]
+
+jobs:
+  selamlama:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Karşılama Adımı
+        run: echo "GitHub Actions dünyasına hoş geldin!"
+
+      - name: Tarih Bilgisi
+        run: date
