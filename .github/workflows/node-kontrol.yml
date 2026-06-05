@@ -2,7 +2,8 @@ name: Node projesi Kontrol Mekanizması
 
 on:
   push:
-    branches: :[ "main" ]
+    branches:
+      - main 
 
 jobs:
   kod-analizi:
